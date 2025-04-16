@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+ 
+    <h2 style="text-align: center; color: green;">
+      Oops! Envrionment Refresh in Progress .... Come back in a Week Time
+      </h2>
+     <p style="background-image: url('bg.PNG');">
+    <marquee> <h2>Things to look... Ofcourse After Refresh ....</h2></marquee>
+    
+    <marquee height="60%" direction="right" behavior="alternate"
+             style="border:red 2px SOLID">
+		
+		<div id="imageContainer">
+			<img id="image" src="" alt="Sequential Images">
+		</div>
+		<script>
+			// Array of image URLs
+			const imageUrls = [
+				'1.PNG',
+				'2.PNG',
+				'3.PNG',
+				'4.PNG',
+				'5.PNG'
+			];
+
+			const imageElement = document.getElementById('image');
+			let currentIndex = 0;
+
+			function loadNextImage() {
+				if (currentIndex < imageUrls.length) {
+					imageElement.src = imageUrls[currentIndex];
+					currentIndex++;
+				} else {
+					// Reset to the first image when all images are loaded
+					currentIndex = 0;
+				}
+			}
+
+			// Load the first image
+			loadNextImage();
+
+			// Set an interval to load the next image every 2000 milliseconds (2 seconds)
+			setInterval(loadNextImage, 4000);
+		</script>
+
+    </marquee>
+  </p>
+</body>
+ 
+</html>
