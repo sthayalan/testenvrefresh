@@ -1,48 +1,95 @@
 <!DOCTYPE html>
-<html>
- 
-<body>
- 
-    <h2 style="text-align: center; color: green;">
-      Working From Home OOPS!! moments
-      </h2>
-     <p style="background-image: url('bg.PNG');">
-    <marquee> <h2>Things to worry... Ofcourse @ home ....</h2></marquee>
-    
-    <marquee height="60%" direction="right" behavior="alternate"
-             style="border:red 2px SOLID">
-		
-		<div id="imageContainer">
-			<img id="image" src="" alt="Sequential Images">
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>WFH OOPS Moments</title>
+	  <style>
+		body {
+		  margin: 0;
+		  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		  background: url('bg.PNG') no-repeat center center fixed;
+		  background-size: cover;
+		  color: #333;
+		}
+
+		.overlay {
+		  background-color: rgba(255, 255, 255, 0.85);
+		  min-height: 100vh;
+		  padding: 2rem;
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: start;
+		}
+
+		header {
+		  text-align: center;
+		  margin-bottom: 1.5rem;
+		}
+
+		header h1 {
+		  font-size: 2.5rem;
+		  color: #2e8b57;
+		  margin: 0;
+		}
+
+		.subheading {
+		  font-size: 1.25rem;
+		  color: #555;
+		  margin-bottom: 2rem;
+		  animation: scroll-left 10s linear infinite;
+		  white-space: nowrap;
+		  overflow: hidden;
+		}
+
+		@keyframes scroll-left {
+		  0% { transform: translateX(100%); }
+		  100% { transform: translateX(-100%); }
+		}
+
+		.image-box {
+		  width: 80%;
+		  max-width: 600px;
+		  height: auto;
+		  border: 3px solid #f44336;
+		  padding: 1rem;
+		  background-color: #fff;
+		  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+		}
+
+		.image-box img {
+		  width: 100%;
+		  height: auto;
+		  border-radius: 10px;
+		}
+	  </style>
+	</head>
+	<body>
+	  <div class="overlay">
+		<header>
+		  <h1>Working From Home OOPS!! Moments</h1>
+		</header>
+
+		<div class="subheading">Things to worry... Of course, at home!</div>
+
+		<div class="image-box">
+		  <img id="image" src="" alt="WFH Funny Moment">
 		</div>
-		<script>
-			// Array of image URLs
-			const imageUrls = [
-				'WFH.gif'
-			];
+	  </div>
 
-			const imageElement = document.getElementById('image');
-			let currentIndex = 0;
+	  <script>
+		const imageUrls = ['WFH.gif'];
+		const imageElement = document.getElementById('image');
+		let currentIndex = 0;
 
-			function loadNextImage() {
-				if (currentIndex < imageUrls.length) {
-					imageElement.src = imageUrls[currentIndex];
-					currentIndex++;
-				} else {
-					// Reset to the first image when all images are loaded
-					currentIndex = 0;
-				}
-			}
+		function loadNextImage() {
+		  imageElement.src = imageUrls[currentIndex];
+		  currentIndex = (currentIndex + 1) % imageUrls.length;
+		}
 
-			// Load the first image
-			loadNextImage();
-
-			// Set an interval to load the next image every 2000 milliseconds (2 seconds)
-			setInterval(loadNextImage, 4000);
-		</script>
-
-    </marquee>
-  </p>
-</body>
- 
+		loadNextImage();
+		setInterval(loadNextImage, 4000);
+	  </script>
+	</body>
 </html>
