@@ -7,20 +7,23 @@
 	  <style>
 		body {
 		  margin: 0;
+		  padding: 0;
 		  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		  background: url('bg.PNG') no-repeat center center fixed;
 		  background-size: cover;
-		  color: #333;
+		  overflow: hidden; /* This hides scrollbars */
+		  height: 100vh;
 		}
 
-		.overlay {
+		..overlay {
 		  background-color: rgba(255, 255, 255, 0.85);
-		  min-height: 100vh;
-		  padding: 2rem;
+		  height: 100vh; /* Ensures it fits viewport height */
 		  display: flex;
 		  flex-direction: column;
 		  align-items: center;
-		  justify-content: start;
+		  justify-content: center; /* Center content vertically */
+		  padding: 1rem;
+		  box-sizing: border-box;
 		}
 
 		header {
@@ -60,7 +63,8 @@
 
 		.image-box img {
 		  width: 80%;
-		  height: auto;
+		  max-height: 50vh; /* Makes sure it won't exceed half the screen */
+		  object-fit: contain;
 		  border-radius: 10px;
 		}
 	  </style>
