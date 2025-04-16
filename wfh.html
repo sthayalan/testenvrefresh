@@ -45,24 +45,26 @@
       100% { transform: translateX(-100%); }
     }
 
-  .image-wrapper {
-    position: absolute;
-    top: 120px;
-    right: 250px;
-    width: 600px; /* Desired width */
-    height: auto; /* Allows height to adjust based on content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .image-wrapper img {
-    max-width: 100%;
-    max-height: 350px; /* Limits the height */
-    height: auto;
-    width: auto;
-    object-fit: contain;
-  }
+    .image-wrapper {
+      position: absolute;
+      top: 120px;
+      right: 250px;
+      width: 600px; /* Adjust as needed for desired width */
+      height: auto; /* Allows height to adjust based on content */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .image-wrapper img {
+      max-width: 100%;
+      max-height: 350px; /* Limits the height */
+      height: auto;
+      width: auto;
+      object-fit: contain;
+      image-rendering: auto; /* Use 'smooth' if supported by your browser */
+    }
+
   </style>
 </head>
 <body>
