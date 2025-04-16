@@ -66,28 +66,13 @@
 <body>
 
   <header>
-    <h1>Working From Home OOPS!! Moments1</h1>
+    <h1>Working From Home OOPS!! Moments2</h1>
   </header>
 
   <div class="subheading">Things to worry... Of course, at home!</div>
 
   <div class="image-wrapper">
-    <img id="image" src="" alt="WFH Funny Moment">
+    <img id="image" src="WFH.gif" alt="WFH Funny Moment">
   </div>
-
-  <script>
-    const imageUrls = ['WFH.gif'];
-    const imageElement = document.getElementById('image');
-    let currentIndex = 0;
-
-    function loadNextImage() {
-      imageElement.src = imageUrls[currentIndex];
-      currentIndex = (currentIndex + 1) % imageUrls.length;
-    }
-
-    loadNextImage();
-    setInterval(loadNextImage, 8000);
-  </script>
-
 </body>
 </html>
