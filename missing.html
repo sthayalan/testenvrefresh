@@ -15,39 +15,24 @@
     .subheading {
       text-align: center;
       font-size: 1rem;
-      color: blue;
+      color: Orange;
       font-weight: bold;
       background-color: rgba(255, 255, 255, 0.5);
       padding: 0.5rem 0;
     }
-/*
-    .image-wrapper {
-      position: absolute;
-      top: 120px;
-      width: 25vw;
-      max-width: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-*/
-    .image-wrapper img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 30%;
-      height: 35%;
-      object-fit: contain;
-    }
+  video {
+      width: 60vw;  /* 60% of the viewport width */
+      height: 60vh; /* 60% of the viewport height */
+      max-width: 100%;
+      max-height: 100%;
+  }
   </style>
 </head>
 <body>
   <div class="subheading">NZ Police - Amber Alert - Missing Person alert!!</div>
-  <div class="image-wrapper">
-    <video width="640" height="360" controls>
+  <video controls>
     <source src="MissingPerson.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-  </div>
 </body>
 </html>
